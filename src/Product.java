@@ -21,8 +21,4 @@ public class Product extends ShipmentItem {
 		return -1.0;
 	}
 
-	public Double getPrice() {
-		return price;
-	}
-
 }

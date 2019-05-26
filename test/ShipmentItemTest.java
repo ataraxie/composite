@@ -27,7 +27,7 @@ class ShipmentItemTest {
 	void testGetOrderContent() {
 		String actualOrderContent = TEST_ORDER_BOX.getContentAsString(0);
 
-		System.out.println("===== ORDER CONTENT =====");
+		System.out.println("\n===== ORDER CONTENT =====");
 		System.out.println(actualOrderContent);
 
 		String expectedOrderContent = "Order Box\n" +
@@ -48,7 +48,7 @@ class ShipmentItemTest {
 	void testGetTotalPrice() {
 		double actualTotalPrice = TEST_ORDER_BOX.getTotalPrice();
 
-		System.out.println("===== TOTAL PRICE =====");
+		System.out.println("\n===== TOTAL PRICE =====");
 		System.out.println(actualTotalPrice);
 
 		double expectedTotalPrice = 605;
