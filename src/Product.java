@@ -11,18 +11,12 @@ public class Product extends ShipmentItem {
 
 	@Override
 	public String getContentAsString(int indent) {
-		// TODO: implement :)
-		return null;
+		return super.getContentAsString(indent) + this.name;
 	}
 
 	@Override
 	public double getTotalPrice() {
-		// TODO: implement :)
-		return -1.0;
-	}
-
-	public Double getPrice() {
-		return price;
+		return this.price;
 	}
 
 }

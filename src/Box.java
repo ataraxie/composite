@@ -13,13 +13,20 @@ public class Box extends ShipmentItem {
 
 	@Override
 	public String getContentAsString(int indent) {
-		// TODO: implement :)
-		return null;
+		String base = super.getContentAsString(indent);
+		StringBuilder builder = new StringBuilder(base + this.name);
+		for (ShipmentItem item : items) {
+			builder.append(item.getContentAsString(indent + 2));
+		}
+		return builder.toString();
 	}
 
 	@Override
 	public double getTotalPrice() {
-		// TODO: implement :)
-		return -1.0;
+		double totalPrice = 0;
+		for (ShipmentItem item : this.items) {
+			totalPrice += item.getTotalPrice();
+		}
+		return totalPrice;
 	}
 }
