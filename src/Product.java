@@ -11,7 +11,7 @@ public class Product extends ShipmentItem {
 
 	@Override
 	public String getContentAsString(int indent) {
-		return super.getContentAsString(indent) + this.name;
+		return super.getIndentString(indent) + this.name;
 	}
 
 	@Override

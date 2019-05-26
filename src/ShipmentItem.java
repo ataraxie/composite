@@ -2,15 +2,7 @@ public abstract class ShipmentItem {
 
 	protected String name;
 
-	public String getContentAsString(int indent) {
-		String baseString = indent == 0 ? "" : "\n";
-		StringBuilder builder = new StringBuilder(baseString);
-		for (int i = 0; i < indent; i++) {
-			builder.append("-");
-		}
-		return builder.toString();
-	}
-
+	public abstract String getContentAsString(int indent);
 	public abstract double getTotalPrice();
 
 	public ShipmentItem(String name) {
@@ -19,6 +11,15 @@ public abstract class ShipmentItem {
 
 	public String getName() {
 		return name;
+	}
+
+	protected String getIndentString(int indent) {
+		String baseString = indent == 0 ? "" : "\n";
+		StringBuilder builder = new StringBuilder(baseString);
+		for (int i = 0; i < indent; i++) {
+			builder.append("-");
+		}
+		return builder.toString();
 	}
 
 }

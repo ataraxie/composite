@@ -13,7 +13,7 @@ public class Box extends ShipmentItem {
 
 	@Override
 	public String getContentAsString(int indent) {
-		String base = super.getContentAsString(indent);
+		String base = super.getIndentString(indent);
 		StringBuilder builder = new StringBuilder(base + this.name);
 		for (ShipmentItem item : items) {
 			builder.append(item.getContentAsString(indent + 2));
